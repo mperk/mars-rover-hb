@@ -32,12 +32,5 @@ namespace MarsRoverTest
             Assert.Equal(2, rover._position.Y);
         }
 
-        [Fact]
-        public void NavigateInvalidChar_ShouldException_WherLetterInvalid()
-        {
-            var rover = new Rover(new Position(5, 5), new Position(1, 2), Direction.E);
-            var result = Record.Exception(() => rover.Navigate("MRR3"));
-            Assert.NotNull(result);
-        }
     }
 }
